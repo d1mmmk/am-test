@@ -1398,14 +1398,6 @@ textarea {
 .search__category_category {
   margin: 0 0 10px;
 }
-.search__category_category.hasActive .search__category_category__title {
-  background: #fee0cc;
-  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #fd934d), color-stop(100%, #fee0cc));
-  background-image: -webkit-linear-gradient(bottom, #fd934d, #fee0cc);
-  background-image: -moz-linear-gradient(bottom, #fd934d, #fee0cc);
-  background-image: -o-linear-gradient(bottom, #fd934d, #fee0cc);
-  background-image: linear-gradient(bottom, #fd934d, #fee0cc);
-}
 .search__category_category.open .search__category_category__title {
   color: #fff;
   -webkit-border-radius: 10px 10px 0 0;
@@ -1414,11 +1406,11 @@ textarea {
   -o-border-radius: 10px 10px 0 0;
   border-radius: 10px 10px 0 0;
   background: #fd934d;
-  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #fd6602), color-stop(100%, #fd934d));
-  background-image: -webkit-linear-gradient(bottom, #fd6602, #fd934d);
-  background-image: -moz-linear-gradient(bottom, #fd6602, #fd934d);
-  background-image: -o-linear-gradient(bottom, #fd6602, #fd934d);
-  background-image: linear-gradient(bottom, #fd6602, #fd934d);
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #fd934d), color-stop(100%, #feb280));
+  background-image: -webkit-linear-gradient(bottom, #fd934d, #feb280);
+  background-image: -moz-linear-gradient(bottom, #fd934d, #feb280);
+  background-image: -o-linear-gradient(bottom, #fd934d, #feb280);
+  background-image: linear-gradient(bottom, #fd934d, #feb280);
 }
 .search__category_category.open .search__category_category__controls {
   color: #fec199;
@@ -1438,6 +1430,15 @@ textarea {
 }
 .search__category_category.open .glyphicon-chevron-down {
   display: inline;
+}
+.search__category_category.hasActive .search__category_category__title {
+  color: #fff;
+  background: #fee0cc;
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #fd8434), color-stop(100%, #fd934d));
+  background-image: -webkit-linear-gradient(bottom, #fd8434, #fd934d);
+  background-image: -moz-linear-gradient(bottom, #fd8434, #fd934d);
+  background-image: -o-linear-gradient(bottom, #fd8434, #fd934d);
+  background-image: linear-gradient(bottom, #fd8434, #fd934d);
 }
 
 .search__category_category__title {
@@ -1499,7 +1500,7 @@ textarea {
   color: #eee;
 }
 .search__category_category__item.active .glyphicon-ok {
-  color: #339933;
+  color: #198c19 !important;
 }
 .search__category_category__item:hover .glyphicon-ok {
   color: #99cc99;

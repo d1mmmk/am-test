@@ -1,11 +1,19 @@
 (function() {
-  var placeholder, subsearch;
+  var disableSelection, placeholder, subsearch;
 
   subsearch = "subsearch";
 
   placeholder = "placeholder";
 
+  disableSelection = "disableSelection";
+
   (function($) {
+    $.fn["disableSelection"] = function() {
+      console.log($(this));
+      return $(this).each(function() {
+        return $(this).attr('unselectable', 'on').css('user-select', 'none').on('selectstart', false);
+      });
+    };
     $.fn["placeholder"] = function() {
       $(this).each(function() {
         var self, target;
@@ -162,6 +170,7 @@
   })(jQuery);
 
   jQuery(document).ready(function() {
+    $(".search__category")[disableSelection]();
     $(".search")[subsearch]();
     return $("input")[placeholder]();
   });

@@ -1,6 +1,15 @@
 subsearch = "subsearch"
 placeholder = "placeholder"
+disableSelection = "disableSelection"
 (($)->
+    $.fn["disableSelection"] = ->
+        console.log($(this))
+        $(this).each ->
+             $(this)
+                 .attr('unselectable', 'on')
+                 .css('user-select', 'none')
+                 .on('selectstart', false);
+
     $.fn["placeholder"] = ->
         $(this).each ->
             self = []
@@ -147,5 +156,6 @@ placeholder = "placeholder"
 )(jQuery)
 
 jQuery(document).ready ->
+    $(".search__category")[disableSelection]()
     $(".search")[subsearch]()
     $("input")[placeholder]()
