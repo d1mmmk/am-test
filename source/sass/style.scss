@@ -1,0 +1,441 @@
+@import "compass";
+@import "normalize";
+@import "bootstrap-glyphicons";
+/* ==========================================================================
+   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+.search {
+	margin: 20px;
+}
+.search__category {
+	float: left;
+	width: 280px;
+}
+@import "glyphicon/*.png";
+.ltie8 {
+	.glyphicon {
+		margin: 0px 0.3em 0px 0px;
+		width: 16px;
+		height: 18px;
+		@include inline-block();
+	}
+	.glyphicon-chevron-down {
+		@include glyphicon-sprite('chevron-down');		
+	}
+	.glyphicon-chevron-right {
+		@include glyphicon-sprite('chevron-right');		
+	}
+	.glyphicon-remove {
+		@include glyphicon-sprite('remove');	
+		&.subclass__close {
+			@include glyphicon-sprite('remove-tag');
+		}	
+	}
+	.glyphicon-ok {
+		@include glyphicon-sprite('ok');
+		&:hover {
+			@include glyphicon-sprite('ok-hover');
+		}
+	}
+	.search__category_category__item {
+		&.active,
+		&:hover {
+			.glyphicon-ok {
+				@include glyphicon-sprite('ok-hover');
+			}
+		}
+	}
+	.search__category_category__controls {
+		top: 5px;
+		right: 5px;
+	}
+}
+.search__category_category {
+	margin: 0 0 10px;
+	&.hasActive {
+
+		.search__category_category__title {
+			background: tint(#fd6602,80);
+			@include background-image(linear-gradient(bottom, tint(#fd6602,30), tint(#fd6602,80)));
+		}
+	}
+	&.open {
+		.search__category_category__title {
+			color: #fff;
+			@include border-radius(10px 10px 0 0);
+			background: tint(#fd6602,30);
+			@include background-image(linear-gradient(bottom, #fd6602, tint(#fd6602,30)));
+		}
+		.search__category_category__controls{
+			color: tint(#fd6602,60);
+			.glyphicon-ok {
+				&:hover {
+					color: tint(green,60);
+				}
+			}
+			.glyphicon-remove {
+				&:hover {
+					color: tint(red,40);
+				}
+			}
+		}
+		.search__category_category__controls,
+		.search__category_category__list{
+			display: block;
+		}
+		.glyphicon-chevron-right {
+			display: none;
+		}
+		.glyphicon-chevron-down {
+			display: inline;
+		}
+	}
+}
+$experimental-support-for-svg: true;
+.search__category_category__title {
+	cursor: pointer;
+	@include border-radius(10px);
+	behavior: url(css/PIE.htc);
+	background: tint(#999,30);
+	@include background-image(linear-gradient(bottom, #999, tint(#999,30)));
+	height: 30px;
+	line-height: 30px;
+	padding: 0 10px;
+	position: relative;
+	.glyphicon-chevron-down {
+		display: none;
+	}
+
+}
+$bordercolor: #bbb;
+.search__category_category__list {
+	display: none;
+	margin: 0;
+	padding: 0;
+	@include border-radius(0 0 10px 10px);
+	behavior: url(css/PIE.htc);
+	border: 1px solid $bordercolor;
+}
+.search__category_category__controls {
+	display: none;
+	position: absolute;
+	right: 10px;
+	top: 0px;
+	white-space: nowrap;
+}
+.search__category_category__item {
+	cursor: pointer;
+	color: #333;
+	padding: 5px 10px;
+	border-top: 1px solid $bordercolor;
+	&:first-child {
+		border: 0;
+	}
+	.glyphicon-ok {
+		color: #eee;
+	}
+	&.active {
+		.glyphicon-ok {
+			color: tint(green,20);
+		}		
+	}
+
+	&:hover {
+		.glyphicon-ok {
+			color: tint(green,60);
+		}
+	}
+}
+.search__form {
+	float: left;
+	width: 350px;
+	margin: 0 0 0 10px;
+}
+.search__form__input_wrap {
+	@include border-radius(10px);
+	behavior: url(css/PIE.htc);
+	background: #fff;
+	border: 1px solid $bordercolor;
+	padding: 2px;
+	margin: 0 0 10px;
+	width: 300px;
+}
+.search__form__input-text {
+	border: 0;
+	padding: 0;
+	margin: 0 0 0 10px;
+	outline: none;
+	height: 26px;
+	width: 210px;
+}
+.search__form__input-submit {
+	/*float: right;*/
+	width: 76px;
+}
+.search__subclass_label {
+}
+.search__subclass_label,
+.search__subclass {
+	margin: 0 0 0 10px;
+	color: #666;
+	font-size: 0.8em;
+}
+.subclass {
+	@include border-radius(5px);
+	behavior: url(css/PIE.htc);
+	background: #eee;
+	padding: 2px 5px;
+	margin: 0 5px 5px 0;
+	@include inline-block();	
+	white-space: nowrap;
+}
+.subclass__close {
+	@include inline-block();
+	vertical-align: bottom;
+	margin: 0px 0 -2px 5px;
+	cursor: pointer;
+}
+.placeholder {
+	color: #999;
+}
+.btn {
+	@include border-radius(10px);
+	behavior: url(css/PIE.htc);
+	border: 0;
+	padding: 0;
+	margin: 0;
+	height: 26px;
+}
+.btn-red {
+	color: #fff;
+	background: tint(red,40);
+	@include background-image(linear-gradient(bottom, red, tint(red,40)));
+	&:hover{
+		background: tint(red,50);
+		@include background-image(linear-gradient(bottom, tint(red,20), tint(red,50)));
+	}
+	&:active{
+		background: tint(red,40);
+		@include background-image(linear-gradient(top, tint(red,20), tint(red,40)));
+	}
+}
